@@ -15,8 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="HD1-ap-HpM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-CS-Jd2">
+                                <rect key="frame" x="18" y="411" width="357" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-GJ-tWu">
+                                <rect key="frame" x="175.66666666666666" y="340" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cVC-kh-0oX"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="ZPS-CS-Jd2" firstAttribute="leading" secondItem="cVC-kh-0oX" secondAttribute="leading" constant="20" id="HjF-OD-hmV"/>
+                            <constraint firstItem="ZPS-CS-Jd2" firstAttribute="centerX" secondItem="HD1-ap-HpM" secondAttribute="centerX" id="Il3-7D-U8i"/>
+                            <constraint firstItem="cVC-kh-0oX" firstAttribute="trailing" secondItem="ZPS-CS-Jd2" secondAttribute="trailing" constant="20" id="hLP-fv-73q"/>
+                            <constraint firstItem="c1n-GJ-tWu" firstAttribute="centerX" secondItem="HD1-ap-HpM" secondAttribute="centerX" id="uej-Pa-SJZ"/>
+                            <constraint firstItem="ZPS-CS-Jd2" firstAttribute="centerY" secondItem="HD1-ap-HpM" secondAttribute="centerY" id="vyK-vW-nld"/>
+                            <constraint firstItem="ZPS-CS-Jd2" firstAttribute="top" secondItem="c1n-GJ-tWu" secondAttribute="bottom" constant="50" id="yoV-QV-ANw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="hG5-zx-Xzb"/>
                 </viewController>
@@ -31,8 +50,27 @@
                     <view key="view" contentMode="scaleToFill" id="c3C-Ii-xvn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-Tq-kAy">
+                                <rect key="frame" x="18" y="411" width="357" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnD-0b-Wg8">
+                                <rect key="frame" x="175.66666666666666" y="340" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0zX-hE-EDZ"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="kXa-Tq-kAy" firstAttribute="centerY" secondItem="c3C-Ii-xvn" secondAttribute="centerY" id="0dL-Cz-hn9"/>
+                            <constraint firstItem="0zX-hE-EDZ" firstAttribute="trailing" secondItem="kXa-Tq-kAy" secondAttribute="trailing" constant="20" id="1wj-ZO-VYL"/>
+                            <constraint firstItem="kXa-Tq-kAy" firstAttribute="leading" secondItem="0zX-hE-EDZ" secondAttribute="leading" constant="20" id="F6K-fk-xjh"/>
+                            <constraint firstItem="RnD-0b-Wg8" firstAttribute="centerX" secondItem="c3C-Ii-xvn" secondAttribute="centerX" id="GcW-0n-0yr"/>
+                            <constraint firstItem="kXa-Tq-kAy" firstAttribute="centerX" secondItem="c3C-Ii-xvn" secondAttribute="centerX" id="WQz-Ex-hQQ"/>
+                            <constraint firstItem="kXa-Tq-kAy" firstAttribute="top" secondItem="RnD-0b-Wg8" secondAttribute="bottom" constant="50" id="oGh-uW-SzK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="RcI-MH-3x9"/>
                 </viewController>
