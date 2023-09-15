@@ -18,6 +18,9 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZPS-CS-Jd2">
                                 <rect key="frame" x="18" y="411" width="357" height="31"/>
+                                <connections>
+                                    <action selector="didMoveSlider:" destination="9z1-z9-3eZ" eventType="valueChanged" id="IfU-S5-9PV"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-GJ-tWu">
                                 <rect key="frame" x="175.66666666666666" y="340" width="42" height="21"/>
@@ -40,6 +43,7 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="hG5-zx-Xzb"/>
                     <connections>
                         <outlet property="resultLabel" destination="c1n-GJ-tWu" id="5GG-wP-XpP"/>
+                        <outlet property="slider" destination="ZPS-CS-Jd2" id="RkI-u0-PvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsG-Kp-RIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -56,6 +60,9 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-Tq-kAy">
                                 <rect key="frame" x="18" y="411" width="357" height="31"/>
+                                <connections>
+                                    <action selector="didMoveSlider:" destination="lks-eM-gup" eventType="valueChanged" id="xRG-eF-8F1"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnD-0b-Wg8">
                                 <rect key="frame" x="175.66666666666666" y="340" width="42" height="21"/>
@@ -76,6 +83,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="RcI-MH-3x9"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="RnD-0b-Wg8" id="lqI-XU-4jc"/>
+                        <outlet property="slider" destination="kXa-Tq-kAy" id="Dgg-O5-qFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1J-F5-WLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

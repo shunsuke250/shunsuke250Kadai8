@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        resultLabel.text = ""
     }
-
+    
+    @IBAction func didMoveSlider(_ sender: Any) {
+        resultLabel.text = "\(slider.value)"
+    }
+    
 
 }
 
