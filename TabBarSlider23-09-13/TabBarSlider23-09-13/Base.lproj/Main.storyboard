@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="z0D-0I-mGN">
             <objects>
-                <viewController id="9z1-z9-3eZ" sceneMemberID="viewController">
+                <viewController id="9z1-z9-3eZ" customClass="SecondViewController" customModule="TabBarSlider23_09_13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HD1-ap-HpM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="hG5-zx-Xzb"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="c1n-GJ-tWu" id="5GG-wP-XpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UsG-Kp-RIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +49,7 @@
         <!--Item 1-->
         <scene sceneID="ESv-Ow-Am2">
             <objects>
-                <viewController id="lks-eM-gup" sceneMemberID="viewController">
+                <viewController id="lks-eM-gup" customClass="ViewController" customModule="TabBarSlider23_09_13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c3C-Ii-xvn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
