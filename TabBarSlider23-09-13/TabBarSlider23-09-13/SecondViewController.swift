@@ -31,3 +31,5 @@ class SecondViewController: UIViewController, SliderValueDelegate {
         resultLabel.text = "\(sliderValue)"
     }
 }
+
+// ToDo: delegateで値を渡せていないため修正する
