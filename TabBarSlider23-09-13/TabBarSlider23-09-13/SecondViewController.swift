@@ -7,29 +7,37 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, SliderValueDelegate {
+class SecondViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet private weak var slider: UISlider!
-    
-    weak var delegate: SliderValueDelegate?
-        
+    @IBOutlet weak var slider: UISlider!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.text = ""
-        let view = ViewController()
-        delegate = view
+        sliderData = SliderData()
+        // 初期のsliderDataの値を設定
+        sliderData.sliderValue = 0.0
+        self.tabBarController?.delegate = self
     }
-        
-    func sliderValueChanged(newValue: Float) {
-        resultLabel.text = "\(newValue)"
-    }
+    var sliderData: SliderData!
 
     @IBAction func didMoveSlider(_ sender: Any) {
         let sliderValue = slider.value
-        delegate?.sliderValueChanged(newValue: sliderValue)
+        resultLabel.text = "\(sliderValue)"
+        sliderData.sliderValue = sliderValue
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let sliderValue = sliderData.sliderValue
         resultLabel.text = "\(sliderValue)"
     }
 }
 
-// ToDo: delegateで値を渡せていないため修正する
+extension SecondViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        // タブが切り替わった際に、sliderDataから値を取得して表示
+        let sliderValue = sliderData.sliderValue
+        resultLabel.text = "\(sliderValue)"        }
+}
