@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SliderValueDelegate: AnyObject {
     func sliderValueChanged(newValue: Float)

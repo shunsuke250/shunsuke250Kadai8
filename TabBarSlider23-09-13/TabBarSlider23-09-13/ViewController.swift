@@ -7,28 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController, SliderValueDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet private weak var slider: UISlider!
+    @IBOutlet weak var slider: UISlider!
 
-    weak var delegate: SliderValueDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.text = ""
-        let secondView = SecondViewController()
-        delegate = secondView
     }
-    
-    func sliderValueChanged(newValue: Float) {
-        resultLabel.text = "\(newValue)"
-    }
-    
 
     @IBAction func didMoveSlider(_ sender: Any) {
         let sliderValue = slider.value
-        delegate?.sliderValueChanged(newValue: sliderValue)
         resultLabel.text = "\(sliderValue)"
+        SliderData.shared.sliderValue = sliderValue
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let sliderValue = SliderData.shared.sliderValue
+        resultLabel.text = "\(sliderValue)"
+        slider.value = sliderValue
     }
 }
