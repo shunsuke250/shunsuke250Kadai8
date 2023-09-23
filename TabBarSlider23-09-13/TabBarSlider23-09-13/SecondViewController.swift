@@ -15,29 +15,18 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.text = ""
-        sliderData = SliderData()
-        // 初期のsliderDataの値を設定
-        sliderData.sliderValue = 0.0
-        self.tabBarController?.delegate = self
-    }
-    var sliderData: SliderData!
+}
 
     @IBAction func didMoveSlider(_ sender: Any) {
         let sliderValue = slider.value
         resultLabel.text = "\(sliderValue)"
-        sliderData.sliderValue = sliderValue
+        SliderData.shared.sliderValue = sliderValue
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let sliderValue = sliderData.sliderValue
+        let sliderValue = SliderData.shared.sliderValue
         resultLabel.text = "\(sliderValue)"
+        slider.value = sliderValue
     }
-}
-
-extension SecondViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        // タブが切り替わった際に、sliderDataから値を取得して表示
-        let sliderValue = sliderData.sliderValue
-        resultLabel.text = "\(sliderValue)"        }
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 class SliderData {
+    static let shared = SliderData()
     var sliderValue: Float = 0.0
 }
