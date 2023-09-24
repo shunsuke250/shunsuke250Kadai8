@@ -7,7 +7,8 @@
 
 import Foundation
 
-class SliderData {
+final class SliderData {
     static let shared = SliderData()
     var sliderValue: Float = 0.0
+    private init() {}
 }
